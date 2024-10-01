@@ -20,9 +20,10 @@ namespace Empresa.Pessoa2.Api.Controllers
         }
 
 
-        [HttpGet(), Route("cpf-valido/maioridade:")]
+        [HttpGet(), Route("maioridade/cpf-valido")]
 
-        public IActionResult ObterCpfValido(DateTime dataNascimento, string cpf)
+
+		public IActionResult ObterCpfValido(DateTime dataNascimento, string cpf)
         {
             /*chamando métodos referente a sua service*/
             var (idade, MaiorIdade) = new IdadeService().MaiorIdade(dataNascimento);
